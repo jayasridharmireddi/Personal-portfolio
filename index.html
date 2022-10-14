@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+  <body>
+    <div id="header">
+       <div class="container">
+        <nav>
+          <!-- <img src="images/logo.png" class="logo"> -->
+          <ul>
+            <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+
+            <li><a href="#portfolio">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header-text">
+        <p>UI/UX developer,ML/Devops enthusiast</p>
+        <h1>Hi, I'm <span>Jayasri</span><br></h1>
+      </div>
+    </div>
+    <div id="about">
+      <div class="row">
+        <div class="about-col-1">
+          <img src="images/jay2.jpeg">
+        </div>
+        <div class="about-col-2">
+          <h1 class="sub-title">About me</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+            <p class="tab-links" onclick="opentab('internships')">Internships</p>
+            <p class="tab-links" onclick="opentab('education')"> Education</p>
+          </div>
+          <div class="tab-contents active-tab" id="skills">
+            <ul>
+              <li> <span>UI/UX</span><br>Designing web app interfaces </li>
+              <li> <span>ML</span><br>Data Science and ML</li>
+              <li> <span>Chatbot dev</span><br>Using NLP and Ml frameworks</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="internships">
+            <ul>
+              <li> <span>Ml chatbot developer</span><br>Designing chatbot for people dealing with anxiety,depression,social disorders </li>
+              <li> <span>Data Science and Business Analyst</span><br>Worked on large data sets using supervised and unsupervised ML algorithms.</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li> <span>Bachelor of Science</span><br>IISER Bhopal</li>
+              <li> <span>Class 12</span><br>Sasi Educational Institutions</li>
+              <li> <span>Class 10</span><br>Dr.KKR Gowtham High School</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- portfolio -->
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="images/work-1.png" alt="">
+            <div class="layer">
+              <h3>Data Analysis on Census Data</h3>
+              <p>Deep Analysis on the census data and using ML algorithms to classify them accordingly.</p>
+              <a href="your link here"><i class="fa fa-dribbble fa-4x"></i></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-2.png" alt="">
+            <div class="layer">
+              <h3>Credit card Fraud Detection</h3>
+              <p>Analysis on large credit card data of a bank to dtect the fraus transactions in them.</p>
+              <a href="#"><i class="material-icons">attachment</i></a>
+
+            </div>
+          </div>
+          <div class="work">
+            <img src="images/work-3.png" alt="">
+            <div class="layer">
+              <h3>Personal Portfolio</h3>
+              <p>A website designed using Html,CSS,Javascript describing my work,education,experience.</p>
+              <a href="#"><i class="fa fa-dribbble fa-4x"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <p><i class="fa fa-envelope"></i>   jayasri19@iiserb.ac.in</p>
+            <p><i class="fa fa-phone"></i>   7386456884</p>
+            <div class="social-icons">
+              <a href="https://www.linkedin.com/in/jayasri-d-3b16601b4/"><i class="fa fa-linkedin"></i></a>
+              <a href="https://github.com/jayasridharmireddi"><i class="fa fa-github"></i></a>
+            </div>
+            <a href="images/Jayasri_19146_resume.pdf"><button type="button" name="button" class="btn btn2">Download CV</button></a>
+            <!-- <button type="button" name="button" class="btn btn2">Download CV</button> -->
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <script type="text/javascript">
+       var tablinks= document.getElementsByClassName("tab-links");
+       var tabcontents= document.getElementsByClassName("tab-contents");
+       function opentab(tabname){
+         for(tablink of tablinks){
+           tablink.classList.remove("active-link");
+         }
+         for(tabcontent of tabcontents){
+           tabcontent.classList.remove("active-tab");
+         }
+         event.currentTarget.classList.add("active-link");
+         document.getElementById(tabname).classList.add("active-tab");
+       }
+    </script>
+  </body>
+</html>
